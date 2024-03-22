@@ -52,7 +52,7 @@ jobs:
       run: npm run docker-test 
       env:
         POSTGRES_USER: "postgres"
-        POSTGRES_PASSWORD: "postgres"
+        POSTGRES_PASSWORD: 
         DB_TEST: "Week11-test"
         DB_HOST: "localhost"
         PGPORT: 5432
