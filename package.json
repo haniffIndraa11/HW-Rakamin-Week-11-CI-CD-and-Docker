@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --detectOpenHandles",
-    "dev": "nodemon ./bin/www.js"
+    "dev": "nodemon ./bin/www.js",
+    "docker": "NODE_ENV=docker && node ./bin/www.js",
+    "docker-test": "NODE_ENV=test && npx sequelize-cli db:create --env test && npx sequelize-cli db:migrate --env test && jest --detectOpenHandles --runInBand --forceExit --coverage --verbose"
   },
   "keywords": [],
   "author": "",
